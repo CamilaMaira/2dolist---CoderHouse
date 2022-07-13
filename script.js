@@ -1,19 +1,22 @@
 const key = "lista_tareas";
 
 const tareas = [
-  { id: 1, contenido: "Entrega CoderHouse", tag: "Para hoy", estado: false },
-  { id: 2, contenido: "Tomar desayuno", tag: "Hecho", estado: true },
-  { id: 3, contenido: "Nico", tag: "Por hacer", estado: false },
-  { id: 4, contenido: "Cine conmigo mismo", tag: "Para hoy", estado: false },
-  { id: 5, contenido: "Almuerzo con mamá", tag: "Hecho", estado: true },
-  { id: 6, contenido: "Estudio AM", tag: "Hecho", estado: true },
+  { id: 1, contenido: "Entrega CoderHouse", estado: "Para hoy", tag: "Personal" },
+  { id: 2, contenido: "Aseo Semanal", estado: "Hecho", tag: "Casa" },
+  { id: 3, contenido: "Junta con Nico", estado: "Por hacer", tag: "Personal" },
+  { id: 4, contenido: "Curso Udemy", estado: "Para hoy", tag: "Trabajo" },
+  { id: 5, contenido: "Almuerzo con mamá", estado: "Hecho", tag: "Casa" },
+  { id: 6, contenido: "Estudio AM", estado: "Por Hacer", tag: "Personal" },
+  { id: 6, contenido: "Jueves 15.00: Reunión de Contenidos", estado: "Hecho", tag: "Trabajo" },
 ];
 
 class Tarea {
   constructor(tarea) {
+    this.id = tarea.id;
     this.contenido = tarea.contenido;
     this.tag = tarea.tag;
-    this.id = tarea.id;
+    this.estado = tarea.estado;
+  
     }
   };
 
@@ -31,7 +34,7 @@ let select = document.querySelector("#select");
 
 //PREGUNTAR NOMBRE
 
- askNombre = () => {
+askNombre = () => {
     Swal.fire({
       title: "Bienvenide a la mejor TO-DO List del planeta",
       text: "Escribe tu nombre",
@@ -46,10 +49,6 @@ let select = document.querySelector("#select");
     })
 };
 askNombre();
-
-
-//VALUE NUEVA TAREA
-
 
 //BOTON ENVIAR NUEVA TAREA
 btnSend.onclick = () => {
@@ -90,12 +89,12 @@ sendTarea = () => {
 	};
 
 	// Definir función que refresca la lista de tareas a partir del arreglo global
-	const refreshLista= () => {
-		mainContenedor.innerHTML = "";
-		for (const [indice, tarea] of tareas.entries()) {
+const refreshLista= () => {
+	mainContenedor.innerHTML = "";
+	  for (const [indice, tarea] of tareas.entries()) {
 
 			// ENLACE PARA ELIMINAR DEL DOM TAREAS
-			const deleteItem = document.createElement("a");
+     const deleteItem = document.createElement("a");
 			deleteItem.classList.add("enlace-eliminar");
 			deleteItem.innerHTML = "&times;";
 			deleteItem.href = "";
