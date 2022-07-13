@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>TO-DO LIST</title>
+</head>
+<body>
+  <main>
+    <header class="main-header">
+      <div class="header-welcome" id="nombre"></div>
+      <div class="header-title">TO-DO list</div>
+    </header>
+
+    <div id="main-tareas">
+      <input id="nuevaTarea" type="text" placeholder="Ingresa una nueva tarea">
+     
+      <select name="select" id="select" class="select">
+        <option value="Hecho">Hecho</option>
+        <option value="Por Hacer">Por hacer</option>
+        <option value="Para Hoy">Para hoy</option>
+      </select>
+
+      <button class="btnSend" id="btnSend">Enviar</button>
+      <ul id="contenedorTareas"></ul>
+    </div>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.all.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
