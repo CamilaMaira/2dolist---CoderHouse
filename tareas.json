@@ -1,0 +1,47 @@
+{
+  "tareas": [
+  {
+    "id": 1,
+    "contenido": "Entrega CoderHouse",
+    "estado": "Para hoy",
+    "tag": "Personal"
+  },
+  {
+    "id": 2,
+    "contenido": "Aseo Semanal",
+    "estado": "Hecho",
+    "tag": "Casa"
+  },
+  {
+    "id": 3,
+    "contenido": "Junta con Nico",
+    "estado": "Por hacer",
+    "tag": "Personal"
+  },
+  {
+    "id": 4,
+    "contenido": "Curso Udemy",
+    "estado": "Para hoy",
+    "tag": "Trabajo"
+  },
+  {
+    "id": 5,
+    "contenido": "Almuerzo con mamá",
+    "estado": "Hecho",
+    "tag": "Casa"
+  },
+  {
+    "id": 6,
+    "contenido": "Estudio AM",
+    "estado": "Por hacer",
+    "tag": "Personal"
+  },
+  {
+    "id": 7,
+    "contenido": "Jueves 15.00: Reunión de Contenidos",
+    "estado": "Hecho",
+    "tag": "Trabajo"
+  }
+  
+]
+}
