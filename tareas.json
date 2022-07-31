@@ -1,5 +1,4 @@
-{
-  "tareas": [
+[
   {
     "id": 1,
     "contenido": "Entrega CoderHouse",
@@ -44,4 +43,3 @@
   }
   
 ]
-}
