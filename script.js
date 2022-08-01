@@ -33,7 +33,8 @@ let btnSend = document.querySelector("#btnSend");
 let mainContenedor = document.querySelector("#contenedorTareas");
 let contenedorNombre = document.querySelector("#nombre");
 let select = document.querySelector("#select");
-let tag = document.querySelector("#selectTag")
+let tag = document.querySelector("#selectTag");
+
 
 //PREGUNTAR NOMBRE
 
@@ -46,7 +47,7 @@ askNombre = () => {
   }).then((result) => {
       if (result.value) {
           const inputName = document.createElement("p");
-          inputName.innerHTML = `Hola, ${result.value}`;
+          inputName.innerHTML = `Hola ${result.value} ✨`;
           inputName.classList.add("name-input")
           contenedorNombre.appendChild(inputName);
       }
@@ -66,6 +67,7 @@ sendTarea = () => {
   const id = largoArray + 1;
   const selectEstado = select.options[select.selectedIndex].value;
   const selectTag = tag.options[tag.selectedIndex].value;
+
 
 
   const tarea = input.value;
@@ -101,19 +103,20 @@ const getTareas = () => {
   .then(tareas => {
     for (const tarea of Object.values(tareas)) {
           const span = document.createElement("span");
-          const p = document.createElement("p");
-          const p2 = document.createElement("p");
+          const tag = document.createElement("p");
+          const estado = document.createElement("p");
           span.textContent = tarea.contenido;
-          p.textContent = tarea.tag;
-          p2.textContent = tarea.estado;
+          tag.textContent = tarea.tag;
+          tag.classList.add("tag-label");
+      
+          estado.textContent = tarea.estado;
           const itemDiv = document.createElement("div");
           itemDiv.classList.add("tarea-contenedor");
           
           if (tareas.contenido) {
             itemDiv.appendChild(span);
-            itemDiv.appendChild(p)
-            itemDiv.appendChild(p2)
-            //itemDiv.appendChild(deleteItem);
+            itemDiv.appendChild(tag)
+            itemDiv.appendChild(estado)
             mainContenedor.appendChild(itemDiv);
         }
     }
@@ -175,21 +178,22 @@ const refreshLista= () => {
 			};
 
 			//SPAN CON TAREA.CONTENIDO
-     
+
       cargarTareas();
          const span = document.createElement("span");
-         const p = document.createElement("p");
-         const p2 = document.createElement("p");
+         const tag = document.createElement("p");
+         const estado = document.createElement("p");
+         tag.textContent = tarea.tag;
+         tag.classList.add("tag-label")
          span.textContent = tarea.contenido;
-         p.textContent = tarea.tag;
-         p2.textContent = tarea.estado;
+         estado.textContent = tarea.estado;
          const itemDiv = document.createElement("div");
          itemDiv.classList.add("tarea-contenedor");
           
          if (tarea.contenido) {
+          itemDiv.appendChild(tag)
            itemDiv.appendChild(span);
-           itemDiv.appendChild(p)
-           itemDiv.appendChild(p2)
+           itemDiv.appendChild(estado)
            itemDiv.appendChild(deleteItem);
            mainContenedor.appendChild(itemDiv);
       }

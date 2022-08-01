@@ -31,7 +31,14 @@ body {
   border: none;
   border-radius: 4px;
   padding: 10px;
-  width: 50%;
+  width: 60%;
+}
+
+#nuevaTarea::placeholder{
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
 }
 
 .tagContenedor {
@@ -45,7 +52,20 @@ body {
   padding-right: 30px;
 }
 
-.select {
+.tag-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+  margin-bottom: 20px;
+  }
+
+
+
+.select, .selectTag {
   margin:10px;        
   border:1px solid #d9d9d9;
   height:36px;
@@ -70,13 +90,18 @@ body {
 
 .btnSend {
   cursor: pointer;
-  width: 120px;
-  background-color: black;
+  width: 150px;
+  background-color: #7368d9;
   padding: 10px;
   color: white;
   box-shadow: none;
   border: none;
   border-radius: 4px;
+  margin-left: 10px;
+}
+
+.btnSend:hover{
+font-size: 15px;
 }
 
 #contenedorTareas{
@@ -84,6 +109,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
+  padding-top: 30px;
 }
 
 .enlace-eliminar {
@@ -110,3 +136,13 @@ body {
 
 }
 
+.below {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.escoge-etiqueta{
+  padding-top: 15px;
+  padding-right: 15px;
+}

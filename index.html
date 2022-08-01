@@ -29,17 +29,20 @@
         <option value="Para Hoy">Para hoy</option>
       </select>
 
-      <div class="tagContenedor">
-        <p>Escoge una etiqueta:</p>
-        <select name="selectTag" id="selectTag" class="selectTag">
-          <option value="Personal">Personal</option>
-          <option value="Casa">Casa</option>
-          <option value="Trabajo">Trabajo</option>
-        </select>
+      <div class="below">
+        <div class="tagContenedor">
+          <p class="escoge-etiqueta">Escoge una etiqueta:</p>
+          <select name="selectTag" id="selectTag" class="selectTag">
+            <option id="personal" class="personal" value="Personal">Personal</option>
+            <option id="casa" value="Casa">Casa</option>
+            <option id="trabajo" value="Trabajo">Trabajo</option>
+          </select>
+        </div>
   
-      </div>
+        <button class="btnSend" id="btnSend">Enviar</button>
 
-      <button class="btnSend" id="btnSend">Enviar</button>
+      </div>
+ 
 
       <ul id="contenedorTareas"></ul>
     </div>
